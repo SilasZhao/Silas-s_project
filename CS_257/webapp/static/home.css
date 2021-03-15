@@ -1,0 +1,181 @@
+/*
+ * map-sample-usa.css
+ * Jeff Ondich
+ * 11 November 2020
+ *
+ * Simple sample using the Datamaps library to show how to incorporate
+ * a US map in your project.
+ *
+ * Datamaps is Copyright (c) 2012 Mark DiMarco
+ * https://github.com/markmarkoh/datamaps
+ */
+
+body {
+    color: #afffff;
+    background-color: #264e86;
+}
+
+a:-webkit-any-link {
+    color: #5E88fc;
+}
+
+#map-container {
+    position: relative;
+    /*float: left;
+    /* Preserving the container div's aspect ratio (which should be 4:3 for
+     * the Datamap US map) uses this slightly bizarre CSS trick, where you make
+     * sure the height is 0 and the ratio between width and padding-bottom
+     * is your desired aspect ratio. See this pretty good article for details:
+     * https://css-tricks.com/aspect-ratio-boxes/
+     */
+    height: 0;
+    width: 80%;
+    padding-bottom: 40%;
+    padding-left: 10%;
+    /* My friend Shaun (Carleton CS '02) is even worse than I am at the details of
+     * graphic design. So when he wants to make sure the designers don't preserve
+     * his color choices, he makes stuff orange to force their hand. I am using
+     * orange here both to remind you to change the color, and to make visible the
+     * size and aspect ratio of the US map object. */
+}
+
+.header {
+    display: block;
+    padding: 10px;
+}
+
+#goals {
+    float: left;
+    width: 40%;
+}
+
+#state-summary {
+    position: absolute;
+    float: right;
+    width: 40%;
+}
+
+.hoverpopup {
+    position: absolute;
+    background: #eeeeee;
+    border: 1px black solid;
+    padding: 5px;
+}
+
+#myInput {
+    /* Add a search icon to input we don't have this image yet????*/
+    /* Position the search icon */
+    background-repeat: no-repeat;
+    /* Do not repeat the icon image */
+    /* Icon up to here */
+    /* Full-width of the search bar*/
+    /* Increase font-size */
+    /* Add some padding */
+    /* Add a grey border */
+    /* Add some space below the input */
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* The search field when it gets focus/clicked on */
+
+#myInput:focus {
+    outline: 3px solid #ddd;
+}
+
+.hoverpopup {
+    color: black;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    position: relative;
+    min-width: 230px;
+    background-size: cover;
+    z-index: 1;
+    display: inline-block;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content_a {
+    margin-top: -1px;
+    /* Prevent double borders */
+    background-color: #cccccc;
+    /* Grey background color */
+    padding: 5px;
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove default text underline */
+    font-size: 18px;
+    /* Increase the font-size */
+    color: black;
+    /* Add a black text color */
+    border: 1px solid black;
+    position: absolute;
+    display: none;
+}
+
+.dropdown-content_a a:-webkit-any-link {
+    color: black;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {
+    display: block;
+}
+
+.chart-container {
+    display: block;
+    width: 75%;
+    margin: 20px;
+    padding-bottom: 30px;
+    padding-left: 20%;
+    padding-top: 20px;
+}
+
+.container {
+    padding: 50px;
+}
+
+.background-boxes {
+    padding-top: 10px;
+}
+
+svg.ct-chart-bar,
+svg.ct-chart-line {
+    overflow: visible;
+}
+
+.ct-label.ct-label.ct-horizontal.ct-end {
+    position: relative;
+    justify-content: flex-end;
+    text-align: right;
+    transform-origin: 100% 0;
+    transform: translate(-100%) rotate(-45deg);
+    white-space: nowrap;
+}
+
+#top_horizontal_square {
+    text-align: center;
+}
+
+.chart-title {
+    text-align: center;
+}

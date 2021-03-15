@@ -1,0 +1,27 @@
+Command line Syntax
+By: Aiden Chang, Duc Nguyen
+
+The program can only take 1 argument at the same time
+
+python3 books.py [--title | -t] <"book title"> 
+Example: python3 books.py -t "Mobi"
+Searches for and displays all books containing the string **book title**. The string is case sensitive and all spaces must be included. Must contain quotation marks.
+
+python3 books.py [--author | -a] <”author name”> 
+Example: python3 books.py -a "Toni"
+Searches for and displays all authors containing the string **author name**. For each of those authors, every book by them is displayed. The string is case sensitive and all spaces must be included. Must contain quotation marks. 
+
+python3 books.py [--year | -y] <start year> <end year>
+Example: python3 books.py -y 1890 1900
+Searches for and displays all books published between the **start year** and the **end year** (inclusive). The **start year** must be smaller then the **end year**. 
+
+python3 books.py [--help | -h]
+Displays the usage and examples of the commands.  
+
+python3 books.py [-multisearch| -ms]
+After the command is typed in, a prompt will appear and ask for the user input. 
+After the first prompt appears, type in the author's name you wish to search. Doing the same for the book title for the second prompt and the starting and ending year for the third prompt. 
+The input is case sensitive, and no need for quotation marks. Typing exit() will allow the user to abort the search and exit at any moment. Press Enter will allow the user to skip the current prompt. After all three prompts, all the books fitting all three criteria will be displayed. 
+
+python3 books.py [--file | -f]
+Get the file of to search in, default is books.csv

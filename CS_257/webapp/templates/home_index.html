@@ -1,0 +1,93 @@
+<!--
+    Aiden Chang, Silas Zhao
+    22 Febuary 2021
+
+    simple HTML to support covid-19 website
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}" />
+    <script type="text/javascript" src="{{ url_for('static', filename='covid.js') }}"></script>
+    -->
+    <script src="{{ url_for('static', filename='datamap.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chartdata.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='navbar.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://localhost:5000/state_detail?state=California">State Covid Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="source.html">About the Data</a>
+                    </li>
+
+
+                </ul>
+                <div id="myDropdown" class="dropdown-content" type="search" placeholder="Search">
+                    <input type="text" placeholder="Search for state name.." id="myInput" onkeyup="filterFunction()">
+                    <div id="list_container" class="dropdown-content_a"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+
+        <div class="starter-template text-center py-5 px-3">
+            <h1>Covid-19 Data in the US</h1>
+            <p class="lead"> a website that presents the covid and vaccination data for the United States</p>
+            <div id="CovidAndVaccination"></div>
+        </div>
+
+    </main>
+    <!-- /.container -->
+    <div id="background_boxes">
+        <div id="top_horizontal_square">
+            <p>Click the map to get detailed information about a specific state</p>
+            <div id="state-summary"></div>
+            <div id="map-container"></div>
+            <div id="basic info"></div>
+        </div>
+        <!-- 
+        <div class="header">
+            <select id="method-select"></select>
+        </div>
+        /.container -->
+        <div class="chart-container">
+            <select id="method-select"></select>
+            <div class="chart-title" id="state-new-cases-title"></div>
+            <div class="ct-chart ct-perfect-fourth" id="state-new-cases-chart"></div>
+            <div id="state-new-cases-tooltip" class="tooltip"> </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='chartdata.js') }}"></script>
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
+
+
+</body>
+
+</html>

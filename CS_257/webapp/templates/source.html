@@ -1,0 +1,73 @@
+<!--
+    Aiden Chang, Silas Zhao
+    22 Febuary 2021
+
+    simple HTML to support covid-19 website
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Source</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='navbar.css') }}">
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}" />
+   
+  
+</head>
+
+<body>
+
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="http://localhost:5000/state_detail?state=California">State Covid Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">About Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="source.html">About the Data</a>
+                        </li>
+
+
+                    </ul>
+
+
+
+                    <div id="myDropdown" class="dropdown-content" type="search" placeholder="Search">
+                        <input type="text" placeholder="Search for state name.." id="myInput" onkeyup="filterFunction()">
+                        <div id="list_container" class="dropdown-content_a"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main class="container">
+
+            <div class="starter-template text-center py-5 px-3">
+                <h1>About the data</h1>
+                <p class="lead"> covid-19 cases and historical data are retrieved from <a href="https://covid.cdc.gov/covid-data-tracker/#cases_casesper100klast7days">here</a></p>
+                <p class="lead"> vaccination data are retrieved from <a href="https://covid.cdc.gov/covid-data-tracker/#vaccination-trends">here</a> </p>
+                <p class="lead"> All of these are from CDC official website. </p>
+            </div>
+
+        </main>
+        <!-- /.container -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,19 @@
+Aiden Chang, Songyan Zhao
+
+Website Link: https://covidtracking.com/data/api
+
+
+Can search the total cases and vaccines in the United states 
+
+User story: A citizen can get the information about vaccination and covid 19 cases in the US, so they can figure out the current overall situation of the pandemic in America.
+
+Implement: We could have a county map of the state, and the users could hover over a county to get quick summary data, or click on a county to go to a page with more detailed current information and graphs.
+
+
+Total vaccines and cases per state 
+
+User story: A citizen can get the information about vaccination and covid 19 cases in each state, so they can figure out the current overall situation of the pandemic in the state or county.
+
+Implement: We can have a search bar that can search for a state. Selecting a state will forward the user to a page that displays information about the total covid cases and vaccination. 
+
+
