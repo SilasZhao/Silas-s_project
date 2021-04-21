@@ -2,8 +2,8 @@ AUTHORS: Silas Zhao
 
 DATA: all covid and vaccinations information in the US
 
-All of our data comes from CDC website and they are all public. Our raw data can be
-retrieved by click the link in our about the data page.
+All of the data comes from CDC website and they are all public. The raw data can be
+retrieved by click the link in the about the data page.
 or:
 covid data: https://covid.cdc.gov/covid-data-tracker/#cases_casesper100klast7days
 vaccination: https://covid.cdc.gov/covid-data-tracker/#vaccination-trends
@@ -32,6 +32,8 @@ Things are working:
             Number of currently hospitalized people
             Number of increased hospitalized people 
         -get the table that shows the latest information about covid and vaccination.
+
+You can view some screenshots for this program at 
 
 Please don't forgot to change the config.py when loading our data.
 Thank you for reading this:) have a great day
