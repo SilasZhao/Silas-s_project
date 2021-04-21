@@ -31,9 +31,7 @@ Things are working:
             Number of hospitalized people
             Number of currently hospitalized people
             Number of increased hospitalized people 
-        -get the table that shows the latest information about covid and vaccination.
-
-You can view some screenshots for this program at 
+        -get the table that shows the latest information about covid and vaccination. 
 
 Please don't forgot to change the config.py when loading our data.
 Thank you for reading this:) have a great day
